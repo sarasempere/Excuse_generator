@@ -23,8 +23,23 @@ let generateExcuse = () => {
     "while I was praying"
   ];
 
+  let whoRand = randomNum(who);
+  if (whoRand == 0) {
+    document.getElementById("prueba").innerHTML =
+      '<img src="https://i.pinimg.com/originals/b0/c5/26/b0c5260755c8da4d1fd75cc7783807c5.png" />';
+  } else if (whoRand == 1) {
+    document.getElementById("prueba").innerHTML =
+      '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiRZIjd7PoUldz_eHHPDL1eiOyejtJqBZ7pA&usqp=CAU" />';
+  } else if (whoRand == 2) {
+    document.getElementById("prueba").innerHTML =
+      '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG3OyP_PiIU_6DBuGsDU0R37LJt7VT9VNC_w&usqp=CAU" />';
+  } else {
+    document.getElementById("prueba").innerHTML =
+      '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZoB2SKNynuYvutw8aGnrOoTuhscmmIW_Dxw&usqp=CAU" />';
+  }
+
   let excuseMe =
-    who[randomNum(who)] +
+    who[whoRand] +
     " " +
     action[randomNum(action)] +
     " " +
@@ -34,8 +49,8 @@ let generateExcuse = () => {
   return (document.querySelector("#excuse").innerHTML = excuseMe);
 };
 
+generateExcuse();
+
 window.reload = function reload() {
   generateExcuse();
 };
-
-generateExcuse();
