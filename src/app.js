@@ -6,15 +6,6 @@ import "/workspace/vanillajs-hello/src/app.js";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-/*
-//Cargamos archivo .js desde <Script> en archivo html. 
-window.onload = () => {
-  //let randomNumber = Math.floor(Math.random() * 10);
-  document.querySelector("#excuse").innerHTML = generateExcuse();
-  //console.log(randomNumber);
-};
-*/
-
 let randomNum = arr => {
   let rand = Math.floor(Math.random() * arr.length);
   return rand;
@@ -40,7 +31,6 @@ let generateExcuse = () => {
     what[randomNum(what)] +
     " " +
     when[randomNum(when)];
-
   return (document.querySelector("#excuse").innerHTML = excuseMe);
 };
 
